@@ -8,6 +8,8 @@ public class CamerTrack : MonoBehaviour {
 
     public float cameraEaseDistance;
 
+    public float cameraNearDistance;
+
 
     public GameObject target;
 
@@ -25,25 +27,15 @@ public class CamerTrack : MonoBehaviour {
         transform.LookAt(target.transform);
         Vector3 aV = transform.position;
         Vector3 bV = target.transform.position * cameraEaseDistance;
-        //Vector3 newV = Vector3.
 
-        //Vector3 offSetVector = Vector3.Distance(aV,bV);
 
-        if(Vector3.Distance(transform.position, target.transform.position) > cameraEaseDistance)
-        {
-            print("movecameplz");
+        if (Vector3.Distance(transform.position, target.transform.position) > cameraEaseDistance)
+        {     
             transform.position = Vector3.SmoothDamp(transform.position, target.transform.position, ref velocity, smoothTime);
             Vector3 defHeight = transform.position;
             defHeight.y = cameraHeight;
             transform.position = defHeight;
         }
-
-
-        if (Vector3.Distance(transform.position, target.transform.position) <= cameraEaseDistance)
-        {
-            print("stopcameplz");
-        }
-
 
     }
 }

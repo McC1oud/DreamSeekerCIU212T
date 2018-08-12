@@ -7,10 +7,17 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class PlayerController : MonoBehaviour
 {
+    public Camera mainCam;
+
+    public GameObject playerModel;
+    private Vector3 directionHeading;
+    private bool mF, mB, mL, mR;
+
     CharacterStats myStats;
     NavMeshAgent agent;
-    public float speed;
+    public float charSpeed;
     public float rotationSpeed = 100f;
+    private float diagNormSpeed = 0.711f;
 
     //attack cooldown
     public float attackcd;
@@ -38,6 +45,9 @@ public class PlayerController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        directionHeading = new Vector3(0, 0, 0);
+        mF = mB = mL = mR = false;
+
         attackspd = 1;
         attackcd = 0;
         dashcd = 0;
@@ -52,42 +62,132 @@ public class PlayerController : MonoBehaviour
         attackcd -= Time.deltaTime * attackspd;
         dashcd -= Time.deltaTime;
         energyCd -= Time.deltaTime;
-        // var speed = 5.0;
-        if (Input.GetKey(KeyCode.A))
-            Debug.Log("Pressing A");
-
-        if (Input.GetKey(KeyCode.W))
-            Debug.Log("Pressing W");
-
-        if (Input.GetKey(KeyCode.S))
-            Debug.Log("Pressing S");
-
-        if (Input.GetKey(KeyCode.D))
-            Debug.Log("Pressing D");
-
-
-        //var x = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
-        //var z = Input.GetAxis("Vertical") * Time.deltaTime * speed;
 
         float x = Input.GetAxisRaw("Horizontal");
         float z  = Input.GetAxisRaw("Vertical");
-        Vector3 movement = new Vector3(x, 0, z);
 
-        //transform.Translate(x, 0, z);
-        if (movement != Vector3.zero)
+        Vector3 directionMovement = new Vector3(x, 0, z);
+
+        
+
+        float newCharSpeed = charSpeed;
+
+        if (x != 0 && z != 0)
         {
-            // change the float to make the rotation more or less snappy
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement.normalized), 1f);
+            newCharSpeed = charSpeed * diagNormSpeed;
+            
         }
 
-        transform.Translate(movement * speed * Time.deltaTime, Space.World);
+        if (x == 0 & z == 0)
+        {
+            mL = false;
+            mR = false;
+        }
 
+        if (x < 0)
+        {
+            mL = true;
+            mR = false;
+            transform.Translate(-mainCam.transform.right * (newCharSpeed));
+           
+            directionHeading = -mainCam.transform.right;
+
+        }
+
+        if (x > 0)
+        {
+            mL = false;
+            mR = true;
+            transform.Translate(mainCam.transform.right * (newCharSpeed));
+        
+            directionHeading = mainCam.transform.right;
+
+        }
+
+        if (z < 0)
+        {
+            mB = true;
+            mF = false;
+            transform.Translate(-mainCam.transform.forward * (newCharSpeed));
+        
+            directionHeading = -mainCam.transform.forward;
+
+        }
+
+        if (z > 0)
+        {
+            mB = false;
+            mF = true;
+            transform.Translate(mainCam.transform.forward * (newCharSpeed));
+     
+            directionHeading = mainCam.transform.forward;
+
+        }
+
+        if (mF == true && mR == true)
+        {
+            mB = false;
+            mL = false;
+
+            directionHeading = mainCam.transform.forward + mainCam.transform.right;
+        }
+
+        if (mR == true && mB == true)
+        {
+
+            mL = false;
+            mF = false;
+            directionHeading = -mainCam.transform.forward + mainCam.transform.right;
+        }
+
+        if (mB == true && mL == true)
+        {
+            mF = false;
+            mR = false;
+            directionHeading = -mainCam.transform.forward + -mainCam.transform.right;
+        }
+
+        if (mL == true && mF == true)
+        {
+            mR = false;
+            mB = false;
+            directionHeading = mainCam.transform.forward + -mainCam.transform.right;
+        }
+
+        directionHeading.y = 0;
+        playerModel.transform.rotation = Quaternion.LookRotation(directionHeading);
+        //playerModel.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(directionHeading), 25f * Time.deltaTime);
+
+        mF = mB = mL = mR = false;
+
+
+
+
+
+
+        /* 
+         //transform.Translate(x, 0, z);
+         if (movement != Vector3.zero)
+         {
+             // change the float to make the rotation more or less snappy
+             playerModel.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement.normalized), 1f);
+         }
+         */
+
+
+
+
+
+
+
+
+        /*
         // Dash  -- Add CooldDown to Dash
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             if (dashcd <= 0)
             {
-                speed = 40;
+                charSpeed = 40;
                 print("Dash");
                 dashcd = .5f;
             }
@@ -95,16 +195,18 @@ public class PlayerController : MonoBehaviour
             // Bandaid Solution. Find a better way to code dash
            
         }
-        // Checking for current Speed. 
-        if (speed > 10)
-        {
-            speed -= 100* Time.deltaTime;
-        }
-        if (speed < 10)
-        {
-            speed = 10;
-        }
         
+    /*
+        // Checking for current Speed. 
+        if (charSpeed > 10)
+        {
+            charSpeed -= 100* Time.deltaTime;
+        }
+        if (charSpeed < 10)
+        {
+            charSpeed = 10;
+        }
+        */
         //Punch
         // Spawn collider in front when animation shows punch has extended and then destroy collider. Before destroy check if it hit and deal damage if hit enemy
         if (Input.GetMouseButtonDown(0))
