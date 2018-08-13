@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     CharacterStats myStats;
     NavMeshAgent agent;
     public float charSpeed;
+    public float originalCharSpeed;
     public float rotationSpeed = 100f;
     private float diagNormSpeed = 0.711f;
 
@@ -47,7 +48,7 @@ public class PlayerController : MonoBehaviour
     {
         directionHeading = new Vector3(0, 0, 0);
         mF = mB = mL = mR = false;
-
+        originalCharSpeed = charSpeed;
         attackspd = 1;
         attackcd = 0;
         dashcd = 0;
@@ -181,32 +182,32 @@ public class PlayerController : MonoBehaviour
 
 
 
-        /*
-        // Dash  -- Add CooldDown to Dash
+        
+         // Dash  -- Add CooldDown to Dash
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             if (dashcd <= 0)
             {
-                charSpeed = 40;
+                charSpeed *= 10;
                 print("Dash");
-                dashcd = .5f;
+                dashcd = 1f;
             }
         
             // Bandaid Solution. Find a better way to code dash
            
         }
         
-    /*
+    
         // Checking for current Speed. 
-        if (charSpeed > 10)
+        if (charSpeed > originalCharSpeed)
         {
-            charSpeed -= 100* Time.deltaTime;
+            charSpeed -= .1f;
         }
-        if (charSpeed < 10)
+        if (charSpeed < originalCharSpeed)
         {
-            charSpeed = 10;
+            charSpeed = originalCharSpeed;
         }
-        */
+        
         //Punch
         // Spawn collider in front when animation shows punch has extended and then destroy collider. Before destroy check if it hit and deal damage if hit enemy
         if (Input.GetMouseButtonDown(0))
@@ -283,9 +284,7 @@ public class PlayerController : MonoBehaviour
                 {
                     Debug.Log("On Cooldown.");
                 }
-                myStats.currentHealth += (myStats.maxHealth / 5);
-                myStats.currentEnergy -= 25;
-                Debug.Log("Heal");
+                
                 // Play heal animation
 
             }
@@ -365,7 +364,7 @@ public class PlayerController : MonoBehaviour
         attackcd = 1f;
         punchCollider.enabled = true;
         punchmesh.enabled = true;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         punchCollider.enabled = false;
         punchmesh.enabled = false;
     }
@@ -375,7 +374,7 @@ public class PlayerController : MonoBehaviour
         attackcd = 1.5f;
         kickCollider.enabled = true;
         kickmesh.enabled = true;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         kickCollider.enabled = false;
         kickmesh.enabled = false;
     }
@@ -387,7 +386,7 @@ public class PlayerController : MonoBehaviour
         energyCd = 1.5f;
         poundCollider.enabled = true;
         poundmesh.enabled = true;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         poundCollider.enabled = false;
         poundmesh.enabled = false;
     }
