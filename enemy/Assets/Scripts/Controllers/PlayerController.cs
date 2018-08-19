@@ -69,8 +69,6 @@ public class PlayerController : MonoBehaviour
 
         Vector3 directionMovement = new Vector3(x, 0, z);
 
-        
-
         float newCharSpeed = charSpeed;
 
         if (x != 0 && z != 0)
@@ -156,35 +154,16 @@ public class PlayerController : MonoBehaviour
         }
 
         directionHeading.y = 0;
-        playerModel.transform.rotation = Quaternion.LookRotation(directionHeading);
-        //playerModel.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(directionHeading), 25f * Time.deltaTime);
-
+        if(directionHeading != Vector3.zero)
+        {
+            playerModel.transform.rotation = Quaternion.LookRotation(directionHeading);
+        }
+        
         mF = mB = mL = mR = false;
-
-
-
-
-
-
-        /* 
-         //transform.Translate(x, 0, z);
-         if (movement != Vector3.zero)
-         {
-             // change the float to make the rotation more or less snappy
-             playerModel.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement.normalized), 1f);
-         }
-         */
-
-
-
-
-
-
-
 
         
          // Dash  -- Add CooldDown to Dash
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetButton("LBumper"))
         {
             if (dashcd <= 0)
             {
@@ -210,7 +189,7 @@ public class PlayerController : MonoBehaviour
         
         //Punch
         // Spawn collider in front when animation shows punch has extended and then destroy collider. Before destroy check if it hit and deal damage if hit enemy
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetButton("Fire3"))//Button mapped to Gamepad X
         {
             if (attackcd <= 0)
             {
@@ -228,18 +207,12 @@ public class PlayerController : MonoBehaviour
             else
             {
                 Debug.Log("Attack On Cooldown.");
-            }
-            
-
-
-
-
-           
+            }     
         }
 
         //Kick
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) || Input.GetButton("Fire1"))//Button mapped to Gamepad A
         {
             if (attackcd <= 0)
             {
@@ -264,7 +237,7 @@ public class PlayerController : MonoBehaviour
 
         //Skills
         //Healing Skill
-        if (Input.GetKeyDown(KeyCode.U))
+        if (Input.GetKeyDown(KeyCode.U) || Input.GetAxis("Horizontal3") > 0)
         {
             //Check if have enough energy
             if (myStats.currentEnergy < 25)
@@ -293,7 +266,7 @@ public class PlayerController : MonoBehaviour
 
         //Tiger Skill
         // 
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I) || Input.GetAxis("Vertical3") < 0)
         {
             //Check if have enough energy
             if (myStats.currentEnergy < 30)
@@ -324,7 +297,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //Dragon Skill
-        if (Input.GetKeyDown(KeyCode.O))
+        if (Input.GetKeyDown(KeyCode.O) || Input.GetAxis("Vertical3") > 0)
         {
             // checks if you have 20 energy
             if (myStats.currentEnergy < 20)
