@@ -15,7 +15,7 @@ public class CameraPivot : MonoBehaviour {
 	void Update () {
         float x = Input.GetAxis("Horizontal2");
 
-        print(x);
+       
         if(x > 0.5f)
         {
             transform.Translate(Vector3.right * camPanSpeed * Time.deltaTime);

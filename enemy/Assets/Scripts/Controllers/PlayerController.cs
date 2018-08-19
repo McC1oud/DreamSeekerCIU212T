@@ -7,6 +7,13 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class PlayerController : MonoBehaviour
 {
+    public GameObject punchingBag;
+    public GameObject characterMod;
+    private bool targetOn = false;
+    private bool currentlyLockedOn = false;
+    private bool letsLockOn = false;
+
+
     public Camera mainCam;
 
     public GameObject playerModel;
@@ -60,6 +67,27 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        /*
+        if (Input.GetButtonDown("RBumper") && !currentlyLockedOn)
+        {
+            letsLockOn = true;
+            
+        }
+
+        if (Input.GetButtonDown("RBumper") && currentlyLockedOn)
+        {
+            letsLockOn = false;
+            currentlyLockedOn = false;
+        }
+
+        if (letsLockOn)
+        {
+            LockOnEnemy();
+            print("activated");
+        }
+        */
+
         attackcd -= Time.deltaTime * attackspd;
         dashcd -= Time.deltaTime;
         energyCd -= Time.deltaTime;
@@ -156,7 +184,11 @@ public class PlayerController : MonoBehaviour
         directionHeading.y = 0;
         if(directionHeading != Vector3.zero)
         {
-            playerModel.transform.rotation = Quaternion.LookRotation(directionHeading);
+            if(!currentlyLockedOn)
+            {
+                playerModel.transform.rotation = Quaternion.LookRotation(directionHeading);
+            }
+           
         }
         
         mF = mB = mL = mR = false;
@@ -331,6 +363,16 @@ public class PlayerController : MonoBehaviour
 
 
     }
+
+    private void LockOnEnemy()
+    {
+        Vector3 targetSet = new Vector3(punchingBag.transform.position.x, 0, punchingBag.transform.position.z);
+        characterMod.transform.LookAt(targetSet);
+        currentlyLockedOn = true;
+    }
+
+
+
 
     IEnumerator Punching()
     {

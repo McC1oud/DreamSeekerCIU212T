@@ -2172,6 +2172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc763940695c5294594791cdcf5c9d45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  punchingBag: {fileID: 2019717715}
+  characterMod: {fileID: 333073733}
   mainCam: {fileID: 282840813}
   playerModel: {fileID: 333073733}
   charSpeed: 0.1
