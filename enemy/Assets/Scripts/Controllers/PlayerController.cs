@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
-        /*
+        
         if (Input.GetButtonDown("RBumper") && !currentlyLockedOn)
         {
             letsLockOn = true;
@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
             LockOnEnemy();
             print("activated");
         }
-        */
+        
 
         attackcd -= Time.deltaTime * attackspd;
         dashcd -= Time.deltaTime;
