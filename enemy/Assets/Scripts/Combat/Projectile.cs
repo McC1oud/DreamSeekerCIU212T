@@ -9,6 +9,7 @@ public class Projectile : MonoBehaviour {
     public int Damage { get; set; }
 
     Vector3 spawnPosition;
+    GameObject player;
     public Rigidbody rb;
 
     void Start()
@@ -18,7 +19,8 @@ public class Projectile : MonoBehaviour {
         spawnPosition = transform.position;
         rb = GetComponent<Rigidbody>();
         GetComponent<Rigidbody>().AddForce(Direction * 50f);
-        
+        player = GameObject.Find("RotationContainer");
+
     }
 
     void Update()
@@ -28,7 +30,7 @@ public class Projectile : MonoBehaviour {
             Dissipate();
         }
 
-        rb.AddForce(transform.forward * 100);
+        rb.AddForce(player.transform.forward * 100);
 
     }
 

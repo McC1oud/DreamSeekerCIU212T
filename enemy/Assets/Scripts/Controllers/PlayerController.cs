@@ -344,7 +344,7 @@ public class PlayerController : MonoBehaviour
                 {
 
                     Debug.Log("EnergyShot!");
-                    Instantiate(energyBall, transform.position + new Vector3(0, 1, 1), Quaternion.identity);
+                    Instantiate(energyBall, ballSpawn.transform.position + new Vector3(0, 1, 1), Quaternion.identity);
                     myStats.currentEnergy -= 20;
                     energyCd = 1.5f;
                 }
