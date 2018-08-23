@@ -7,6 +7,7 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class PlayerController : MonoBehaviour
 {
+    public GameObject ballSpawn;
     public GameObject punchingBag;
     public GameObject characterMod;
     private bool targetOn = false;
