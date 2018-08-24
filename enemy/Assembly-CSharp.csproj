@@ -81,8 +81,8 @@
     <Compile Include="Assets\Character Stats\Examples\Power Ups\Scripts\PlayerTextUI.cs" />
     <Compile Include="Assets\Character Stats\Examples\Power Ups\Scripts\Powerup.cs" />
     <Compile Include="Assets\Character Stats\StatModifier.cs" />
+    <Compile Include="Assets\DreamSeekerCamera\CameraPivot.cs" />
     <Compile Include="Assets\DreamSeekerCamera\CamerTrack.cs" />
-    <Compile Include="Assets\DreamSeekerCamera\CharacterControls.cs" />
     <Compile Include="Assets\DreamSeekerCamera\Tests\CameraSC.cs" />
     <Compile Include="Assets\Scripts\BatControls.cs" />
     <Compile Include="Assets\Scripts\Combat\CharacterCombat.cs" />
@@ -94,9 +94,11 @@
     <Compile Include="Assets\Scripts\Combat\PunchTrigger.cs" />
     <Compile Include="Assets\Scripts\Controllers\DummyControl.cs" />
     <Compile Include="Assets\Scripts\Controllers\EnemyController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\LockOn.cs" />
     <Compile Include="Assets\Scripts\Controllers\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Controllers\RangeEnemyController.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\FillArray.cs" />
     <Compile Include="Assets\Scripts\HeadbandLength.cs" />
     <Compile Include="Assets\Scripts\Interactable.cs" />
     <Compile Include="Assets\Scripts\PlayerManager.cs" />
@@ -106,16 +108,16 @@
     <Compile Include="Assets\Scripts\Stats\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\Stats\Stat.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>D:/CIU212/DreamSeekerCIU212T/enemy/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/cduffie/Desktop/DreamSeekerCIU212T/enemy/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/CIU212/DreamSeekerCIU212T/enemy/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/cduffie/Desktop/DreamSeekerCIU212T/enemy/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/CIU212/DreamSeekerCIU212T/enemy/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/cduffie/Desktop/DreamSeekerCIU212T/enemy/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/CIU212/DreamSeekerCIU212T/enemy/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/cduffie/Desktop/DreamSeekerCIU212T/enemy/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -313,10 +315,10 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
-      <HintPath>C:/Users/lnguyen7/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
+      <HintPath>C:/Users/cduffie/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
-      <HintPath>C:/Users/lnguyen7/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/cduffie/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
