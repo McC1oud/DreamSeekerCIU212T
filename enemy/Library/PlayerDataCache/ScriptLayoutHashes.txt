@@ -1,11 +1,11 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/McC1oud/Desktop/TestSpot/TestSpot.exe
+C:/Users/cduffie/Desktop/Dream_Seeker/Dream_Seeker.exe
 SceneListBegin?
-Assets/Scenes/Main.unity
+Assets/Scenes/StageDemo01/STAGE01.unity
 SceneListEnd?
 7b8e7866f51a0817662577a68d076786 Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
-dcb2af6ad553c15c81ccef600748f134 Assembly-CSharp.dll:.PlayerController
+4b073a35d57da806993c031750c78dc5 Assembly-CSharp.dll:.PlayerController
 a8d930527bf604f820c1c45cacf437c6 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 cf455f7a806648c6ed4c7d3e3f8a0e03 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -19,6 +19,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 30afa8783a8bbee2e465ec9ce1efaee2 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 30afa8783a8bbee2e465ec9ce1efaee2 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 607d64d2c4bc76ac9876e6f7b9cc7edf UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
+676d1d316a8a69f438e73151b79c98d0 Assembly-CSharp.dll:.CameraPivot
 1bd73dc08780414ea7c06375d2fbc18e Assembly-CSharp.dll:.Interactable
 1bd73dc08780414ea7c06375d2fbc18e Assembly-CSharp.dll:.Enemy
 4e15dcc3534dc36a76ac419785cf197a Unity.TextMeshPro.dll:TMPro.TMP_ScrollbarEventHandler
@@ -103,7 +104,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 30afa8783a8bbee2e465ec9ce1efaee2 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 30afa8783a8bbee2e465ec9ce1efaee2 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 607d64d2c4bc76ac9876e6f7b9cc7edf UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-61b1a0c8167351e3f813382bfd058419 Assembly-CSharp.dll:.PlayerStats
+8a6321739e3deb139aaebce0d0e5a00e Assembly-CSharp.dll:.PlayerStats
 5833a86cc374f497ae8d9fb9d8c3e5f4 Unity.TextMeshPro.dll:TMPro.TMP_SubMeshUI
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
@@ -120,8 +121,10 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
+3e290b2330300728a2724423ebaf06f8 Assembly-CSharp.dll:.LockOn
 ff7f23e06634b204c443e48727a55ff0 Assembly-CSharp.dll:.EnemyController
-61b1a0c8167351e3f813382bfd058419 Assembly-CSharp.dll:.EnemyStats
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CameraSC
+8a6321739e3deb139aaebce0d0e5a00e Assembly-CSharp.dll:.EnemyStats
 322cb40e1e282f28af980cbef7922a90 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
@@ -129,6 +132,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
+c11c045ac9696373934fa565057ce19c Assembly-CSharp.dll:.Boss1Control
 36d02774f21cd7ca153f86603aefd09f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 41be6a40321a8ed0293a52a682609de8 Assembly-CSharp.dll:Kryz.CharacterStats.Examples.EquipmentPanel
 0fa04eae72643230de077e2ba25eddea Assembly-CSharp.dll:Kryz.CharacterStats.Examples.PlatformGenerator
@@ -136,7 +140,8 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 cff26f393b894f8a7842c84925e5793d Assembly-CSharp.dll:Kryz.CharacterStats.Examples.Platform
 2716fc22dbe4918eea100a5410bb6b29 Assembly-CSharp.dll:.Projectile
 5f0c04ea07d57a8016e301b32e102741 Assembly-CSharp.dll:Kryz.CharacterStats.Examples.StatDisplay
-66a851e3e825abab3b3f87e852e01efe Assembly-CSharp.dll:.CamerTrack
+f7a3dc19f2079bd3e0f6631f3e62c5f8 Assembly-CSharp.dll:.CamerTrack
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.DummyControl
 ed8e899e731d2cf38efeec99d7c9407f Assembly-CSharp.dll:Kryz.CharacterStats.Examples.Player
 65c129538c3b1f07082e1ae53f0f0d47 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 becaed155d735e397c8074c74ca23c42 Assembly-CSharp.dll:Kryz.CharacterStats.Examples.PlayerBarUI
@@ -190,18 +195,19 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 af214f5a4de2b5c4a3ebc6e206e999fe Assembly-CSharp.dll:Kryz.CharacterStats.Examples.Item
 bcada89394089914d10ff70647b120da Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
+bf40e91b0203248a02645b9670f6e6eb Assembly-CSharp.dll:.FillArray
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PoundTrigger
-61b1a0c8167351e3f813382bfd058419 Assembly-CSharp.dll:.CharacterStats
+32658ab2fc09203df89c821b92f27adb Assembly-CSharp.dll:.ChargeAtk
+8a6321739e3deb139aaebce0d0e5a00e Assembly-CSharp.dll:.CharacterStats
 e763036081c708b34f78f5a56f72c23d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 0292643f1d9161a287009d47196d8473 Assembly-CSharp.dll:.SpawningBall
+81d3fa35f3270744d8c271fbb7597c65 Assembly-CSharp.dll:.restarttimer
 bf22e89fa4b77e86d45d7ae313079474 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 374b7d36d8f94aa1deb1e06c687663c6 Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
-729c3ab860a6558d62f2be61088b151f Assembly-CSharp.dll:.CharacterControls
 b428f34ecb7883e54d5112b84839287e Assembly-CSharp.dll:.HeadbandLength
 f0d23d0511d809ea08cbea60ec379e0e Assembly-CSharp.dll:.CharacterCombat
 136f28bae18bcd1072d830ee3456f3ab Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 f76b93f881b3bcb5f95d72132cf73398 Assembly-CSharp.dll:Kryz.CharacterStats.Examples.PlayerTextUI
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PunchTrigger
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.IsKnocked
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CameraSC

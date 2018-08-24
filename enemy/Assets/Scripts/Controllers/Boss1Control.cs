@@ -56,28 +56,35 @@ public class Boss1Control : MonoBehaviour {
         nextAttack -= Time.deltaTime;
 
         //Set this to phase 3 and add collider for charging attack
-        if (nextAttack <= 0)
-        {
-            if (skillqueue == 1)
-            {
-                StartCoroutine(PhaseTwo());
-                nextAttack = 4f;
-                
-            }
-            else if (skillqueue == 2)
-            {
-                StartCoroutine(PhaseThree());
-                nextAttack = 2f;
-                
-            }
-        }
+        float distance = Vector3.Distance(target.position, transform.position);
 
-        if (chargeTimer <= 0)
-        {
-            StartCoroutine(Charging());
-			StartCoroutine (StopCharge ());
-            chargeTimer = 5;
-        }
+        if (distance <= lookRadius)
+            {
+            if (nextAttack <= 0)
+                {
+                if (skillqueue == 1)
+                    {
+                    StartCoroutine(PhaseTwo());
+                    nextAttack = 4f;
+
+                    }
+                else if (skillqueue == 2)
+                    {
+                    StartCoroutine(PhaseThree());
+                    nextAttack = 2f;
+
+                    }
+                }
+
+            if (chargeTimer <= 0)
+                {
+                StartCoroutine(Charging());
+                StartCoroutine(StopCharge());
+                chargeTimer = 5;
+                }
+
+            }
+            
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
