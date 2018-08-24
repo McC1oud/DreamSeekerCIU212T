@@ -84,14 +84,17 @@
     <Compile Include="Assets\DreamSeekerCamera\CameraPivot.cs" />
     <Compile Include="Assets\DreamSeekerCamera\CamerTrack.cs" />
     <Compile Include="Assets\DreamSeekerCamera\Tests\CameraSC.cs" />
+    <Compile Include="Assets\restarttimer.cs" />
     <Compile Include="Assets\Scripts\BatControls.cs" />
     <Compile Include="Assets\Scripts\Combat\CharacterCombat.cs" />
+    <Compile Include="Assets\Scripts\Combat\ChargeAtk.cs" />
     <Compile Include="Assets\Scripts\Combat\GoingToPlayer.cs" />
     <Compile Include="Assets\Scripts\Combat\IsKnocked.cs" />
     <Compile Include="Assets\Scripts\Combat\KickTrigger.cs" />
     <Compile Include="Assets\Scripts\Combat\PoundTrigger.cs" />
     <Compile Include="Assets\Scripts\Combat\Projectile.cs" />
     <Compile Include="Assets\Scripts\Combat\PunchTrigger.cs" />
+    <Compile Include="Assets\Scripts\Controllers\Boss1Control.cs" />
     <Compile Include="Assets\Scripts\Controllers\DummyControl.cs" />
     <Compile Include="Assets\Scripts\Controllers\EnemyController.cs" />
     <Compile Include="Assets\Scripts\Controllers\LockOn.cs" />
@@ -107,6 +110,7 @@
     <Compile Include="Assets\Scripts\Stats\EnemyStats.cs" />
     <Compile Include="Assets\Scripts\Stats\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\Stats\Stat.cs" />
+    <Compile Include="Assets\Scripts\Win State.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/cduffie/Desktop/DreamSeekerCIU212T/enemy/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
