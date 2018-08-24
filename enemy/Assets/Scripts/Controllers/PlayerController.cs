@@ -8,8 +8,14 @@ using UnityEngine.AI;
 public class PlayerController : MonoBehaviour
 {
     public GameObject ballSpawn;
+    public GameObject logicDummy;
     public GameObject punchingBag;
     public GameObject characterMod;
+
+    private int targetsAvailable;
+    private int currentLockTarget = 0;
+    private int maxTarget;
+
     private bool targetOn = false;
     private bool currentlyLockedOn = false;
     private bool letsLockOn = false;
@@ -51,9 +57,14 @@ public class PlayerController : MonoBehaviour
     public MeshRenderer kickmesh;
     public MeshRenderer poundmesh;
 
+    public List<GameObject> nearbyEnemyList; 
+
     // Use this for initialization
     void Start()
     {
+        nearbyEnemyList = new List<GameObject>();
+        nearbyEnemyList.Add(logicDummy);
+
         directionHeading = new Vector3(0, 0, 0);
         mF = mB = mL = mR = false;
         originalCharSpeed = charSpeed;
@@ -68,26 +79,56 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        targetsAvailable = nearbyEnemyList.Count;
 
-        
-        if (Input.GetButtonDown("RBumper") && !currentlyLockedOn)
+        if (targetsAvailable <= 0)
         {
-            letsLockOn = true;
-            
+            nearbyEnemyList.Add(logicDummy);
         }
 
-        if (Input.GetButtonDown("RBumper") && currentlyLockedOn)
+        if (nearbyEnemyList.Count > 1)
         {
-            letsLockOn = false;
-            currentlyLockedOn = false;
+            nearbyEnemyList.Remove(logicDummy);
         }
 
-        if (letsLockOn)
+
+        if(currentLockTarget > targetsAvailable-1)
         {
-            LockOnEnemy();
-            print("activated");
+            currentLockTarget = targetsAvailable-1;
         }
-        
+
+        if (targetsAvailable == 1)
+        {
+            currentLockTarget = 0;
+        }
+
+        if (Input.GetButtonDown("Fire2"))
+        {
+            currentLockTarget++;
+
+            if (currentLockTarget > targetsAvailable-1)
+            {
+                currentLockTarget = targetsAvailable-1;
+            }
+        }
+        if (Input.GetButtonDown("Fire4"))
+        {
+            currentLockTarget--;
+
+            if(currentLockTarget < 0)
+            {
+                currentLockTarget = 0;
+            }
+
+            if (targetsAvailable == 1)
+            {
+                currentLockTarget = 0;
+            }
+        }
+
+
+
+        LockOnChecker();
 
         attackcd -= Time.deltaTime * attackspd;
         dashcd -= Time.deltaTime;
@@ -364,15 +405,45 @@ public class PlayerController : MonoBehaviour
 
 
     }
+    private void LockOnChecker()
+    {
+        if (Input.GetButtonDown("RBumper") && !currentlyLockedOn)
+        {
+            letsLockOn = true;
+
+        }
+
+        if (Input.GetButtonDown("RBumper") && currentlyLockedOn)
+        {
+            letsLockOn = false;
+            currentlyLockedOn = false;
+        }
+
+        if (letsLockOn)
+        {
+            LockOnEnemy();
+            
+        }
+
+    }
 
     private void LockOnEnemy()
     {
-        Vector3 targetSet = new Vector3(punchingBag.transform.position.x, 0, punchingBag.transform.position.z);
+        if(nearbyEnemyList[currentLockTarget] == null)
+        {
+            return;
+        }
+        Vector3 targetSet = new Vector3(nearbyEnemyList[currentLockTarget].transform.position.x, 0, nearbyEnemyList[currentLockTarget].transform.position.z);
         characterMod.transform.LookAt(targetSet);
         currentlyLockedOn = true;
+        
     }
 
-
+    public void DeletefromList(GameObject baddy)
+    {
+        nearbyEnemyList.Remove(baddy);
+        
+    }
 
 
     IEnumerator Punching()

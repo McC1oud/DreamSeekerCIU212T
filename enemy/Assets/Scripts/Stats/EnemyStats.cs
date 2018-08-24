@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyStats : CharacterStats
 {
+    
+
     CharacterStats myStats;
 
     private void Awake()
@@ -14,6 +16,7 @@ public class EnemyStats : CharacterStats
     // Not working from here. Using Enemy cs update to kill enemy atm
     public override void Die()
     {
+        
         // Remove on Enemy Stats if this is the death method
         if (myStats.currentHealth <= 0)
         {

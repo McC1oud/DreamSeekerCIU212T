@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class CharacterStats : MonoBehaviour
 {
+    public GameObject player;
+
     public int maxHealth = 100;
     public int currentHealth;   //  { get; private set; }
 
@@ -49,6 +51,7 @@ public class CharacterStats : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            player.GetComponent<PlayerController>().DeletefromList(gameObject);
             Die();
         }
     }
