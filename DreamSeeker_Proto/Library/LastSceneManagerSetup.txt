@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/SampleScene.unity
+- path: D:/DreamSeekerCIU212T22018/DreamSeekerCIU212T/enemy/Assets/Scenes/StageDemo01.unity
   isLoaded: 1
   isActive: 1
