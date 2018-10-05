@@ -1,0 +1,4 @@
+sceneSetups:
+- path: D:/DreamSeekerCIU212T22018/DreamSeekerCIU212T/MainScenes/Assets/Scenes/StageDemo01/STAGE01.unity
+  isLoaded: 1
+  isActive: 1
