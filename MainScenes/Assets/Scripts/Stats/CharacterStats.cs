@@ -1,5 +1,6 @@
 ﻿
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterStats : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class CharacterStats : MonoBehaviour
 
     public Stat damage;
     public Stat defense;
+
+    public GameObject DamageTprefab;
 
     void Awake()
     {
@@ -36,6 +39,18 @@ public class CharacterStats : MonoBehaviour
         }
     }
 
+    bool CritChance()
+    {
+        //chance of critting hard coded
+        //need to create formula to increase critical chance based on stats
+        int criticalchance = Random.Range(0, 100);
+        if (criticalchance < 10)
+            return true;
+        //else
+        return false;
+
+
+    }
     
     // Call  method for taking damage
     // Change to public virtual so that 
@@ -45,10 +60,15 @@ public class CharacterStats : MonoBehaviour
         damage -= defense.GetValue();
         // Set minimum damage to 0 to avoid healing from defense being higher than damage
         damage = Mathf.Clamp(damage, 0, int.MaxValue);
+
+        print("1");
+        InitDamageT(damage.ToString()).GetComponent<Animator>().SetTrigger("Hit");
+        print("2");
+
         currentHealth -= damage;
         Debug.Log(transform.name + " takes " + damage + " damage.");
-
-
+        print("3");
+        
         if (currentHealth <= 0)
         {
             player.GetComponent<PlayerController>().DeletefromList(gameObject);
@@ -68,5 +88,21 @@ public class CharacterStats : MonoBehaviour
         PlayerManager.instance.KillPlayer();
     }
     
+    GameObject InitDamageT(string text)
+    //void InitDamageT(string text)
+    {
+        GameObject temp = Instantiate(DamageTprefab) as GameObject;
+        RectTransform tempRect = temp.GetComponent<RectTransform>();
+        temp.transform.SetParent(transform.Find("DamageCanvas"));
+        temp.transform.localPosition = DamageTprefab.transform.localPosition;
+        temp.transform.localRotation = DamageTprefab.transform.localRotation;
+        temp.transform.localScale = DamageTprefab.transform.localScale;
+
+        temp.GetComponent<Text>().text = text;
+        //temp.GetComponent<Animator>().SetTrigger("Hit");
+        Destroy(temp.gameObject, 0.5f);
+        return temp;
+
+    }
 
 }
