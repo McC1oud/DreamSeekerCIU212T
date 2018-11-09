@@ -44,7 +44,7 @@ public class CharacterStats : MonoBehaviour
         //chance of critting hard coded
         //need to create formula to increase critical chance based on stats
         int criticalchance = Random.Range(0, 100);
-        if (criticalchance < 0)
+        if (criticalchance < 50)
             return true;
         //else
         return false;

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Controls the enemies main combat
+
 [RequireComponent(typeof(CharacterStats))]
 public class CharacterCombat : MonoBehaviour
 {
@@ -63,12 +65,14 @@ public class CharacterCombat : MonoBehaviour
         stats.TakeDamage(myStats.damage.GetValue(), CritChance());
     }
 
+    // Enemy crit chance
+
     bool CritChance()
     {
         // Chance of critting hard coded to 50%
         // create formula to increase critcal chance based on stats
         int criticalchance = Random.Range(0, 100);
-        if (criticalchance < 50)
+        if (criticalchance < 0)
             return true;
         // else
         return false;
