@@ -47,12 +47,21 @@ public class Projectile : MonoBehaviour {
         if (collision.transform.tag == "enemy")
         {
             print("DamageDealt");
-            collision.transform.GetComponent<CharacterStats>().TakeDamage(Damage);
+            collision.transform.GetComponent<CharacterStats>().TakeDamage(Damage,CritChance());
             Dissipate();
         }
         
     }
 
-
+    bool CritChance()
+    {
+        // Chance of critting hard coded to 50%
+        // create formula to increase critcal chance based on stats
+        int criticalchance = Random.Range(0, 100);
+        if (criticalchance < 50)
+            return true;
+        // else
+        return false;
+    }
 
 }

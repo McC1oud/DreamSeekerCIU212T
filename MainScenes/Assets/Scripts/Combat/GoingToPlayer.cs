@@ -21,7 +21,7 @@ public class GoingToPlayer : MonoBehaviour
             //rb.AddForce(other.contacts[0].normal * 1000);
 
             //Add script to deal damage to player here
-            other.transform.GetComponent<CharacterStats>().TakeDamage(Damage);
+            other.transform.GetComponent<CharacterStats>().TakeDamage(Damage,CritChance());
 
             Destroy(this.gameObject);
 
@@ -60,7 +60,16 @@ public class GoingToPlayer : MonoBehaviour
     }
 
     //Need to recode so that the ball doesnt target the players feet. The players pivot however is also located at the feet
+    bool CritChance()
+    {
+        // Chance of critting hard coded to 50%
+        // create formula to increase critcal chance based on stats
+        int criticalchance = Random.Range(0, 100);
+        if (criticalchance < 50)
+            return true;
+        // else
+        return false;
+    }
 
-  
 
 }

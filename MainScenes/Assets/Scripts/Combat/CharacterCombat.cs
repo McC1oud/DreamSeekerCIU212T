@@ -60,6 +60,17 @@ public class CharacterCombat : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
-        stats.TakeDamage(myStats.damage.GetValue());
+        stats.TakeDamage(myStats.damage.GetValue(), CritChance());
+    }
+
+    bool CritChance()
+    {
+        // Chance of critting hard coded to 50%
+        // create formula to increase critcal chance based on stats
+        int criticalchance = Random.Range(0, 100);
+        if (criticalchance < 50)
+            return true;
+        // else
+        return false;
     }
 }

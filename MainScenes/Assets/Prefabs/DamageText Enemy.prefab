@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114073679519634528}
   - component: {fileID: 95210961011351322}
   m_Layer: 0
-  m_Name: DamageText
+  m_Name: DamageText Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.82672495, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

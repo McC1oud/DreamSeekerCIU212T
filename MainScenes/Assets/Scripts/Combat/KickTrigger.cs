@@ -35,7 +35,7 @@ public class KickTrigger : MonoBehaviour {
             //rb.AddForce(other.contacts[0].normal * 1000);
 
             //Add script to deal damage to player here
-            other.transform.GetComponent<CharacterStats>().TakeDamage(Damage);
+            other.transform.GetComponent<CharacterStats>().TakeDamage(Damage,CritChance());
             myStats.currentEnergy += 10;
             Debug.Log(myStats.name + " gained 10 energy.");
             
@@ -43,5 +43,16 @@ public class KickTrigger : MonoBehaviour {
             // Destroy(this.gameObject);
 
         }
+    }
+
+    bool CritChance()
+    {
+        // Chance of critting hard coded to 50%
+        // create formula to increase critcal chance based on stats
+        int criticalchance = Random.Range(0, 100);
+        if (criticalchance < 50)
+            return true;
+        // else
+        return false;
     }
 }

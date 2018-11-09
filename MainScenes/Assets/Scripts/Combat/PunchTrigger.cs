@@ -48,12 +48,23 @@ public class PunchTrigger : MonoBehaviour {
            
 
             //Add script to deal damage to player here
-            other.transform.GetComponent<CharacterStats>().TakeDamage(Damage);
+            other.transform.GetComponent<CharacterStats>().TakeDamage(Damage,CritChance());
             myStats.currentEnergy += 5;
             Debug.Log(myStats.name + " gained 5 energy.");
 
             // Destroy(this.gameObject);
 
         }
+    }
+
+    bool CritChance()
+    {
+        // Chance of critting hard coded to 50%
+        // create formula to increase critcal chance based on stats
+        int criticalchance = Random.Range(0, 100);
+        if (criticalchance < 50)
+            return true;
+        // else
+        return false;
     }
 }
