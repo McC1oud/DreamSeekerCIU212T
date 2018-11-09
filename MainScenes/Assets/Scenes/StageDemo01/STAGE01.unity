@@ -267,9 +267,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &19236293
 MonoBehaviour:
@@ -895,7 +900,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1334321163}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &52749546
 MonoBehaviour:
@@ -1288,9 +1293,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &78010148
 MonoBehaviour:
@@ -2498,9 +2508,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &189671381
 MonoBehaviour:
@@ -2902,9 +2917,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &220105799
 MonoBehaviour:
@@ -3114,9 +3134,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &223933884
 MonoBehaviour:
@@ -4032,9 +4057,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &295871589
 MonoBehaviour:
@@ -4286,9 +4316,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &301108050
 MonoBehaviour:
@@ -4972,9 +5007,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &346581693
 MonoBehaviour:
@@ -6812,9 +6852,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &587818400
 MonoBehaviour:
@@ -7104,9 +7149,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &599184840
 MonoBehaviour:
@@ -7508,9 +7558,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &606776046
 MonoBehaviour:
@@ -7899,9 +7954,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 10
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 1049026472754498, guid: 87d049fafb949ae4da9bbb42028f4303,
     type: 2}
 --- !u!114 &673252370
@@ -8959,9 +9019,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &786413195
 MonoBehaviour:
@@ -9379,9 +9444,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &811736695
 MonoBehaviour:
@@ -9943,9 +10013,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &854569637
 MonoBehaviour:
@@ -10525,9 +10600,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &910605201
 MonoBehaviour:
@@ -11602,9 +11682,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &977541578
 MonoBehaviour:
@@ -12704,9 +12789,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &1096602392
 MonoBehaviour:
@@ -12916,9 +13006,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &1115836572
 MonoBehaviour:
@@ -13263,9 +13358,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &1132653364
 MonoBehaviour:
@@ -13514,9 +13614,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 15
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &1151580120
 MonoBehaviour:
@@ -14716,6 +14821,11 @@ MonoBehaviour:
     baseValue: 0
   defense:
     baseValue: 0
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!195 &1233814154
 NavMeshAgent:
@@ -15043,9 +15153,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &1289436727
 MonoBehaviour:
@@ -15360,12 +15475,13 @@ Transform:
   - {fileID: 1131070038}
   - {fileID: 298139128}
   - {fileID: 332219017}
-  - {fileID: 1657621935}
   - {fileID: 52749545}
+  - {fileID: 1657621935}
   - {fileID: 1503988386}
   - {fileID: 1878788591}
   - {fileID: 1880352553}
   - {fileID: 233963378}
+  - {fileID: 1470769091}
   m_Father: {fileID: 1878788596}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15759,9 +15875,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 15
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &1376023616
 MonoBehaviour:
@@ -16952,6 +17073,140 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1452263512}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1470769090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1119942188481890, guid: 9871a184df522684c85d7f9e822aeb8d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1470769091}
+  - component: {fileID: 1470769097}
+  - component: {fileID: 1470769096}
+  - component: {fileID: 1470769095}
+  - component: {fileID: 1470769094}
+  - component: {fileID: 1470769093}
+  - component: {fileID: 1470769092}
+  m_Layer: 8
+  m_Name: PoundTest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1470769091
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4997292646706414, guid: 9871a184df522684c85d7f9e822aeb8d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1470769090}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 3, y: 0.5, z: 3}
+  m_Children: []
+  m_Father: {fileID: 1334321163}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1470769092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1470769090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e03bcfc20bfebe47a74abd9b4dbbb35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockback: 0
+--- !u!114 &1470769093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114690499158640230, guid: 9871a184df522684c85d7f9e822aeb8d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1470769090}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0563e112734df574aaf5114604a70601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockback: 0
+--- !u!54 &1470769094
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 54129045006025052, guid: 9871a184df522684c85d7f9e822aeb8d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1470769090}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &1470769095
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 65947737892414668, guid: 9871a184df522684c85d7f9e822aeb8d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1470769090}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1470769096
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 23175482951118250, guid: 9871a184df522684c85d7f9e822aeb8d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1470769090}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: 7649b6e536230a946b45c28ad795a5e4, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1470769097
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 33605139876581696, guid: 9871a184df522684c85d7f9e822aeb8d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1470769090}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1472724686
 GameObject:
   m_ObjectHideFlags: 0
@@ -17485,11 +17740,12 @@ GameObject:
   - component: {fileID: 1503988386}
   - component: {fileID: 1503988385}
   - component: {fileID: 1503988382}
-  - component: {fileID: 1503988384}
   - component: {fileID: 1503988387}
+  - component: {fileID: 1503988384}
   - component: {fileID: 1503988383}
+  - component: {fileID: 1503988388}
   m_Layer: 8
-  m_Name: Pound
+  m_Name: PoundTriggerZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17543,6 +17799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e03bcfc20bfebe47a74abd9b4dbbb35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knockback: 0
 --- !u!54 &1503988384
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -17595,6 +17852,18 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &1503988388
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1503988381}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.9999999, z: 1.0000001}
+  m_Center: {x: 0.00000005960464, y: 0, z: -0.00000008940696}
 --- !u!1001 &1512125488
 Prefab:
   m_ObjectHideFlags: 0
@@ -17813,9 +18082,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &1523585967
 MonoBehaviour:
@@ -18406,9 +18680,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &1605701277
 MonoBehaviour:
@@ -18677,9 +18956,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &1653205885
 MonoBehaviour:
@@ -18813,8 +19097,8 @@ GameObject:
   - component: {fileID: 1657621938}
   - component: {fileID: 1657621939}
   - component: {fileID: 1657621940}
-  - component: {fileID: 1657621937}
   - component: {fileID: 1657621936}
+  - component: {fileID: 1657621937}
   m_Layer: 8
   m_Name: KickTriggerZone
   m_TagString: Untagged
@@ -18834,7 +19118,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1.5}
   m_Children: []
   m_Father: {fileID: 1334321163}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1657621936
 Rigidbody:
@@ -19022,9 +19306,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &1684864338
 MonoBehaviour:
@@ -19234,9 +19523,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &1685844149
 MonoBehaviour:
@@ -19521,9 +19815,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &1705746443
 MonoBehaviour:
@@ -20242,6 +20541,11 @@ MonoBehaviour:
     baseValue: 5
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 1049026472754498, guid: f2a50e14f183fcb4f8c7bad424c4f5c8,
     type: 2}
 --- !u!114 &1752621318
@@ -21165,9 +21469,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &1828656145
 MonoBehaviour:
@@ -21844,9 +22153,14 @@ MonoBehaviour:
   maxEnergy: 100
   currentEnergy: 0
   damage:
-    baseValue: 10
+    baseValue: 0
   defense:
     baseValue: 0
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 1286424026007638, guid: d7cad784825700448a9fe11b27c558d3,
     type: 2}
 --- !u!114 &1878788589
@@ -21867,9 +22181,14 @@ MonoBehaviour:
   maxEnergy: 100
   currentEnergy: 100
   damage:
-    baseValue: 10
+    baseValue: 5
   defense:
     baseValue: 2
+  CriticalRate: 30
+  CriticalDamage: 1.5
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 1286424026007638, guid: d7cad784825700448a9fe11b27c558d3,
     type: 2}
 --- !u!114 &1878788590
@@ -21900,10 +22219,10 @@ MonoBehaviour:
   energyCd: 0
   punchCollider: {fileID: 52749550}
   kickCollider: {fileID: 1657621940}
-  poundCollider: {fileID: 1503988387}
+  poundCollider: {fileID: 1470769095}
   punchmesh: {fileID: 52749549}
   kickmesh: {fileID: 1657621939}
-  poundmesh: {fileID: 1503988382}
+  poundmesh: {fileID: 1470769096}
   nearbyEnemyList: []
 --- !u!4 &1878788591
 Transform:
@@ -22473,9 +22792,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &1904921524
 MonoBehaviour:
@@ -22920,9 +23244,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &1973686249
 MonoBehaviour:
@@ -23705,9 +24034,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &2041713570
 MonoBehaviour:
@@ -24757,9 +25091,14 @@ MonoBehaviour:
   maxEnergy: 0
   currentEnergy: 0
   damage:
-    baseValue: 5
+    baseValue: 0
   defense:
     baseValue: 1
+  CriticalRate: 0
+  CriticalDamage: 0
+  currentExperience: 0
+  maxExperience: 0
+  currentLevel: 0
   DamageTprefab: {fileID: 0}
 --- !u!114 &2098256413
 MonoBehaviour:

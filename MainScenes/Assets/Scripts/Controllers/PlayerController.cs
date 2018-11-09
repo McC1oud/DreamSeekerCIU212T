@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
     public BoxCollider punchCollider;
     //public GameObject punch;    was for spawning collider
     public BoxCollider kickCollider;
-    public CapsuleCollider poundCollider;
+    public BoxCollider poundCollider;
     //mesh
     public MeshRenderer punchmesh;
     public MeshRenderer kickmesh;
@@ -396,10 +396,17 @@ public class PlayerController : MonoBehaviour
               
                 
             }
-               
+
             //Check if have enough energy
             // Play attack animation
             // Check if attack hit enemy
+
+          
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            myStats.currentEnergy = 100;
         }
 
 
@@ -473,7 +480,7 @@ public class PlayerController : MonoBehaviour
         energyCd = 1.5f;
         poundCollider.enabled = true;
         poundmesh.enabled = true;
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.3f);
         poundCollider.enabled = false;
         poundmesh.enabled = false;
     }

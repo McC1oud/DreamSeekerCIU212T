@@ -48,7 +48,7 @@ public class PunchTrigger : MonoBehaviour {
            
 
             //Add script to deal damage to player here
-            other.transform.GetComponent<CharacterStats>().TakeDamage(Damage,CritChance());
+            other.transform.GetComponent<CharacterStats>().TakeDamage(myStats.damage.GetValue(),CritChance());
             myStats.currentEnergy += 5;
             Debug.Log(myStats.name + " gained 5 energy.");
 

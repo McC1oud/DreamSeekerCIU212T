@@ -11,10 +11,12 @@ public class Projectile : MonoBehaviour {
     Vector3 spawnPosition;
     GameObject player;
     public Rigidbody rb;
+    CharacterStats myStats;
 
     void Start()
     {
-        Damage = 10;
+        myStats = GameObject.Find("Player").GetComponent<CharacterStats>();
+        Damage = Mathf.RoundToInt(myStats.damage.GetValue()*1.6f);
         Range = 20f;
         spawnPosition = transform.position;
         rb = GetComponent<Rigidbody>();
@@ -47,7 +49,7 @@ public class Projectile : MonoBehaviour {
         if (collision.transform.tag == "enemy")
         {
             print("DamageDealt");
-            collision.transform.GetComponent<CharacterStats>().TakeDamage(Damage,CritChance());
+            collision.transform.GetComponent<CharacterStats>().TakeDamage(Mathf.RoundToInt(myStats.damage.GetValue() * 1.2f), CritChance());
             Dissipate();
         }
         

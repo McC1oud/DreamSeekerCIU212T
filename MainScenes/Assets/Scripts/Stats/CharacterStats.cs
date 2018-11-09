@@ -15,6 +15,13 @@ public class CharacterStats : MonoBehaviour
     public Stat damage;
     public Stat defense;
 
+    public int CriticalRate;
+    public float CriticalDamage;
+
+    public int currentExperience;
+    public int maxExperience;
+    public int currentLevel;
+
     public GameObject DamageTprefab;
 
     void Awake()
