@@ -14,7 +14,7 @@ public class CharacterCombat : MonoBehaviour
     public float attackSpeed = 1f;
     private float attackCooldown = 0f;
 
-    public float attackDelay = 2f;
+    public float attackDelay;
 
     // Need to recheck what this does
     public event System.Action OnAttack;

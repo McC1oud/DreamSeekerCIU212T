@@ -12,7 +12,7 @@ public class HeadbandLength : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        myStats = GetComponentInParent<CharacterStats>();
+        myStats = GameObject.Find("Player").GetComponent<CharacterStats>();
     }
 	
 	// Update is called once per frame
@@ -24,20 +24,14 @@ public class HeadbandLength : MonoBehaviour
 
         maxHealth = myStats.maxHealth;
 
-        headband.z = (curHealth/maxHealth) ;
-
-        
+        headband.x = ((curHealth/maxHealth) * 0.05f);
 
         transform.localScale = headband;
-
-
-
         
-
         if (Input.GetKeyDown(KeyCode.N))
         {
             Debug.Log(headband);
-            headband.z += .5f;
+            headband.x += .5f;
 
             transform.localScale = headband;
 
@@ -47,7 +41,7 @@ public class HeadbandLength : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.M))
         {
             Debug.Log(curHealth);
-            headband.z -= .5f;
+            headband.x -= .5f;
 
             transform.localScale = headband;
         }
