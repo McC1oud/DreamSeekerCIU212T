@@ -287,7 +287,7 @@ ModelImporter:
     - serializedVersion: 16
       name: MC Running Jump
       takeName: Take 001
-      firstFrame: 0
+      firstFrame: 8
       lastFrame: 16
       wrapMode: 0
       orientationOffsetY: 0

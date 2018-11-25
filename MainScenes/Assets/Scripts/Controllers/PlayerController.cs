@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public GameObject punchingBag;
     public GameObject characterMod;
 
+
     private int targetsAvailable;
     private int currentLockTarget = 0;
     private int maxTarget;
@@ -309,7 +310,8 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        //Skills
+        //Start Skills
+
         //Healing Skill
         if (Input.GetKeyDown(KeyCode.U) || Input.GetAxis("Horizontal3") > 0)
         {
@@ -409,9 +411,12 @@ public class PlayerController : MonoBehaviour
             myStats.currentEnergy = 100;
         }
 
+        //End Skills
 
 
     }
+
+    //Start Lock on utilities
     private void LockOnChecker()
     {
         if (Input.GetButtonDown("RBumper") && !currentlyLockedOn)
@@ -452,6 +457,9 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    //End Lock on utilities
+
+    //Start Coroutines for attacks
 
     IEnumerator Punching()
     {
@@ -485,5 +493,5 @@ public class PlayerController : MonoBehaviour
         poundmesh.enabled = false;
     }
 
-
+    //End Coroutines for attacks
 }
