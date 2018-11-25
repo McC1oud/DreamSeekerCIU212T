@@ -61,6 +61,11 @@ public class AnimationTriggers : MonoBehaviour {
 
     public void DownButtons()
     {
+        if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+        {
+            axisDir = true;
+        }
+
         if (Input.GetKeyDown(KeyCode.W))
         {
             wDir = true;
@@ -85,8 +90,7 @@ public class AnimationTriggers : MonoBehaviour {
 
     public void UpButtons()
     {
-
-       if(Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+        if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
         {
             axisDir = false;
         }
