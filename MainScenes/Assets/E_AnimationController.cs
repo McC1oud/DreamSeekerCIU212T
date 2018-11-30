@@ -18,6 +18,8 @@ public class E_AnimationController : MonoBehaviour {
     {
         float distance = Vector3.Distance(target.position, transform.position);
 
+
+
         if (distance <= lookRadius)
         {
             if (distance > 4)
@@ -28,7 +30,7 @@ public class E_AnimationController : MonoBehaviour {
 
         }
 
-        if (distance <= 3)
+        if (distance <= 4)
         {
             anim.SetBool("playerChase", false);
         }
@@ -45,6 +47,11 @@ public class E_AnimationController : MonoBehaviour {
         int randoNum = Random.RandomRange(0, 2);
         int shouldISlap = Random.RandomRange(0, 4);
 
+        if (shouldISlap == 0)
+        {
+          //  anim.SetBool("slapMyself", true);
+        }
+
         switch (randoNum)
         {
 
@@ -60,5 +67,9 @@ public class E_AnimationController : MonoBehaviour {
                     break;
                 }
         }
+
+       
+
+
     }
 }
