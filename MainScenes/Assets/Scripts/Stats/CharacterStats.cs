@@ -21,13 +21,16 @@ public class CharacterStats : MonoBehaviour
     public int currentExperience;
     public int maxExperience;
     public int currentLevel;
-
+    public int skillPoints = 0;
     public GameObject DamageTprefab;
 
     void Awake()
     {
         currentHealth = maxHealth;
         currentEnergy = 0;
+        currentLevel = 1;
+        maxExperience = 20;
+        currentExperience = 0;
     }
 
     void Update()
@@ -36,13 +39,20 @@ public class CharacterStats : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         //Set min energy and max
         currentEnergy = Mathf.Clamp(currentEnergy, 0, maxEnergy);
-       
+
+
         //Test that dealing damage is working
         //Deals damage to all units with the character stats script including children
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             // Need fix to take damage based on characters strength
-            TakeDamage(10,CritChance());
+            // TakeDamage(10,CritChance());
+            currentExperience += 50;
+        }
+
+        if (currentExperience >= maxExperience)
+        {
+            LevelUp();
         }
     }
 
@@ -59,11 +69,19 @@ public class CharacterStats : MonoBehaviour
 
     }
 
+    public void LevelUp()
+    {
+        currentExperience -= maxExperience;
+        currentLevel += 1;
+        skillPoints += 1;
+        maxExperience = currentLevel ^ 2 * currentLevel * 10 + currentLevel;
+    }
     // Call  method for taking damage
     // Change to public virtual so that 
 
     public void TakeDamage(int damage, bool isCrit)
     {
+
         // Damage reduction based on defense
         damage -= defense.GetValue();
         // Set minimum damage to 0 to avoid healing from defense being higher than damage
@@ -123,17 +141,17 @@ public class CharacterStats : MonoBehaviour
     //}
 
     // virtual allows it to be overridden
-    public virtual void Die ()
+    public virtual void Die()
     {
         Debug.Log(transform.name + " died.");
         // Add Delay to reload the game
-        
+
         print("Reloading Scene");
         new WaitForSeconds(2);
 
         PlayerManager.instance.KillPlayer();
     }
-    
+
     //GameObject InitDamageT(string text)
     ////void InitDamageT(string text)
     //{
