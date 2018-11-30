@@ -15,6 +15,8 @@ public class AnimationTriggers : MonoBehaviour {
     bool isPunching = false;
     bool inCombat = false;
 
+    bool sakuraCD = true, tigerCD = true, dragonCD = true, dashCD = true;
+
 	void Start ()
     {
         anim = GetComponent<Animator>();
@@ -40,7 +42,7 @@ public class AnimationTriggers : MonoBehaviour {
 
     public void CheckForAttacking()
     {
-        if(Input.GetMouseButtonDown(0) || Input.GetButton("Fire3") && punchActive)
+        if(Input.GetMouseButtonDown(0) || Input.GetButtonDown("Fire3") && punchActive)
         {
             ActivateAttacks();
             inCombat = true;
@@ -61,7 +63,12 @@ public class AnimationTriggers : MonoBehaviour {
 
     public void DownButtons()
     {
-        if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+        float x = Input.GetAxisRaw("Horizontal");
+        float z = Input.GetAxisRaw("Vertical");
+
+       
+
+        if (x != 0 || z != 0)
         {
             axisDir = true;
         }
@@ -90,7 +97,10 @@ public class AnimationTriggers : MonoBehaviour {
 
     public void UpButtons()
     {
-        if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+        float x = Input.GetAxisRaw("Horizontal");
+        float z = Input.GetAxisRaw("Vertical");
+
+        if (x == 0 && z == 0)
         {
             axisDir = false;
         }
@@ -179,28 +189,33 @@ public class AnimationTriggers : MonoBehaviour {
     public void SpecialsDetection()
     {
         //Sakura Skil
-        if (Input.GetKeyDown(KeyCode.U) || Input.GetAxis("Horizontal3") > 0)
+        if (Input.GetKeyDown(KeyCode.U) || Input.GetAxis("Horizontal3") > 0 && sakuraCD)
         {
             anim.Play("Sakura Ability Heal");
+            StartCoroutine("CDSakura");
         }
 
         //Tiger Skill
 
-        if (Input.GetKeyDown(KeyCode.I) || Input.GetAxis("Vertical3") < 0)
+        if (Input.GetKeyDown(KeyCode.I) || Input.GetAxis("Vertical3") < 0 && tigerCD)
         {
             anim.Play("Tiger Ability Slam");
+            StartCoroutine("CDTiger");
         }
 
         //Dragon Skill
-        if (Input.GetKeyDown(KeyCode.O) || Input.GetAxis("Vertical3") > 0)
+        if (Input.GetKeyDown(KeyCode.O) || Input.GetAxis("Vertical3") > 0 && dragonCD)
         {
             anim.Play("Push Strike");
+            StartCoroutine("CDDragon");
         }
 
         //Dash Skill
-        if (Input.GetKeyDown(KeyCode.LeftShift)  || Input.GetButton("LBumper"))
+        if (Input.GetKeyDown(KeyCode.LeftShift)  || Input.GetKeyDown(KeyCode.Joystick1Button4) && dashCD)
         {
+          
             anim.Play("MC Running Jump");
+            StartCoroutine("CDDash");
         }
     }
 
@@ -219,5 +234,35 @@ public class AnimationTriggers : MonoBehaviour {
         yield return new WaitForSeconds(attackSpeed);
         punchActive = true;
     }
+
+    IEnumerator CDSakura()
+    {
+        sakuraCD = false;
+        yield return new WaitForSeconds(2f);
+        sakuraCD = true;
+    }
+
+    IEnumerator CDTiger()
+    {
+        tigerCD = false;
+        yield return new WaitForSeconds(2f);
+        tigerCD = true;
+    }
+
+    IEnumerator CDDragon()
+    {
+        dragonCD = false;
+        yield return new WaitForSeconds(2f);
+        dragonCD = true;
+    }
+
+    IEnumerator CDDash()
+    {
+        dashCD = false;
+        yield return new WaitForSeconds(2f);
+        dashCD = true;
+    }
+
 }
+
 

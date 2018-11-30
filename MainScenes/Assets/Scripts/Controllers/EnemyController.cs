@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour {
 
+    public Animator anim;
     public float lookRadius = 20f;
 
     Transform target;
@@ -13,6 +14,9 @@ public class EnemyController : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
+        anim = GetComponent<Animator>();
+
+
         target = PlayerManager.instance.player.transform;
         agent = GetComponent<NavMeshAgent>();
         combat = GetComponent<CharacterCombat>();
@@ -25,17 +29,18 @@ public class EnemyController : MonoBehaviour {
 
         if (distance <= lookRadius)
         {
-            
-            agent.SetDestination(target.position);
-            
 
+            agent.SetDestination(target.position);
+           
             if (distance <= agent.stoppingDistance)
-            {
-                
+            {       
                 AttackSequence();
             }
         }
-	}
+
+
+
+    }
 
     public virtual void AttackSequence()
     {

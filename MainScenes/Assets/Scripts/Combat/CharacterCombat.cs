@@ -50,6 +50,8 @@ public class CharacterCombat : MonoBehaviour
                 OnAttack();
             }
 
+            gameObject.GetComponent<E_AnimationController>().DoAnAttack();
+
             print("Executing Attack");
             attackCooldown = 1f / attackSpeed;
         }
