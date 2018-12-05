@@ -11,10 +11,13 @@ public class Controller : MonoBehaviour
     public GameObject DragonM;
     public GameObject SakuraM;
     public GameObject OptionM;
+    public GameObject UIButtons;
+    public PlayerController playercontrol;
 
     // Update is called once per frame
     void Update () 
 	{
+       
 		// Reverse the active state every time escape is pressed
 		if (Input.GetKeyDown (KeyCode.Escape)) 
 		{
@@ -41,6 +44,7 @@ public class Controller : MonoBehaviour
 
 	void Resume()
 	{
+        UIButtons.SetActive(false);
 		mainMenu.SetActive (false);
 		GameIsPaused = false;
         Time.timeScale = 1;
@@ -48,12 +52,14 @@ public class Controller : MonoBehaviour
 
 	void Pause()
 	{
+        UIButtons.SetActive(true);
 		mainMenu.SetActive (true);
 		GameIsPaused = true;
         Time.timeScale = 0;
 	}	
 	public void CloseMenu()
 	{
+        UIButtons.SetActive(false);
         TigerM.SetActive(false);
         DragonM.SetActive(false);
         SakuraM.SetActive(false);
@@ -63,6 +69,7 @@ public class Controller : MonoBehaviour
         Time.timeScale = 1;
 	}
 
+    /// Make a separate script for each skill
 	public void ActivateSkill()
 	{
 		int points = GameObject.Find ("Player").GetComponent<CharacterStats>().skillPoints;
@@ -80,11 +87,17 @@ public class Controller : MonoBehaviour
 
     public void OpenTiger()
     {
+        var tempColor = TigerM.GetComponent<Image>().color;
+        tempColor.a = 0f;
+        TigerM.GetComponent<Image>().color = tempColor;
+
         TigerM.SetActive(true);
         DragonM.SetActive(false);
         SakuraM.SetActive(false);
         OptionM.SetActive(false);
         mainMenu.SetActive(false);
+
+        //this.gameObject.GetComponent<Image>().color = Color.red;
     }
 
     public void OpenDragon()

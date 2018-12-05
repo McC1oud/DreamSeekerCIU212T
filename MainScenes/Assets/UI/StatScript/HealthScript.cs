@@ -16,6 +16,6 @@ public class HealthScript : MonoBehaviour {
 	void Update ()
     {
         Text healthtext = GameObject.Find("HealthText").GetComponent<Text>();
-        healthtext.text = characterStats.currentHealth.ToString() + " / " + characterStats.maxHealth.ToString();
+        healthtext.text = " " + characterStats.currentHealth.ToString() + " / " + characterStats.maxHealth.ToString();
     }
 }

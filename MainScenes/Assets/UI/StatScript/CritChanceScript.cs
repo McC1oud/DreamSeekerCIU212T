@@ -17,6 +17,6 @@ public class CritChanceScript : MonoBehaviour {
     void Update()
     {
         Text healthtext = GameObject.Find("CriticalText").GetComponent<Text>();
-        healthtext.text = " " + characterStats.CriticalRate.ToString() + "%";
+        healthtext.text = " " + characterStats.CriticalRate.ToString() + " %";
     }
 }

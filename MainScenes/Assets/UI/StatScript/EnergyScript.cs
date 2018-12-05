@@ -16,6 +16,6 @@ public class EnergyScript : MonoBehaviour {
     void Update()
     {
         Text healthtext = GameObject.Find("EnergyText").GetComponent<Text>();
-        healthtext.text = characterStats.currentEnergy.ToString() + " / " + characterStats.maxEnergy.ToString();
+        healthtext.text = " " + characterStats.currentEnergy.ToString() + " / " + characterStats.maxEnergy.ToString();
     }
 }

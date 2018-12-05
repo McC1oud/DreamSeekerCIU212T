@@ -488,8 +488,11 @@ public class PlayerController : MonoBehaviour
     IEnumerator TigerPound()
     {
         Debug.Log("Pound");
+        Time.timeScale = 0.3f;
         myStats.currentEnergy -= 30;
         energyCd = 1.5f;
+        yield return new WaitForSeconds(0.3f);
+        Time.timeScale = 1;
         poundCollider.enabled = true;
         poundmesh.enabled = true;
         yield return new WaitForSeconds(0.3f);

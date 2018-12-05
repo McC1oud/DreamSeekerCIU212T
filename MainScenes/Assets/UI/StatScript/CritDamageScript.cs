@@ -16,7 +16,7 @@ public class CritDamageScript : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        Text healthtext = GameObject.Find("CriticalDText").GetComponent<Text>();
-        healthtext.text = " " + characterStats.CriticalDamage.ToString();
+        Text critdmgtext = GameObject.Find("CriticalDText").GetComponent<Text>();
+        critdmgtext.text = " " + (characterStats.CriticalDamage*100).ToString () + " %";
     }
 }
