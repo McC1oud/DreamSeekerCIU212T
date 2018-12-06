@@ -80,10 +80,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (GameObject.Find("Menu").GetComponent<Controller>().GameIsPaused == true)
         {
             return;
         }
+        */
         targetsAvailable = nearbyEnemyList.Count;
 
         if (targetsAvailable <= 0)
