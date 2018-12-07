@@ -124,6 +124,7 @@
     <Compile Include="Assets\Scripts\Stats\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\Stats\Stat.cs" />
     <Compile Include="Assets\Scripts\Win State.cs" />
+    <Compile Include="Assets\UI\CopyThis\ActiveSkill.cs" />
     <Compile Include="Assets\UI\MenuScripts\BarScript.cs" />
     <Compile Include="Assets\UI\MenuScripts\Controller.cs" />
     <Compile Include="Assets\UI\MenuScripts\DarkenUiButton.cs" />
