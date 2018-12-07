@@ -89,6 +89,7 @@
     <Compile Include="Assets\E_AnimationController.cs" />
     <Compile Include="Assets\MisScripts\AudioController.cs" />
     <Compile Include="Assets\MisScripts\CombatArena.cs" />
+    <Compile Include="Assets\MisScripts\DisableBossBarrier.cs" />
     <Compile Include="Assets\MisScripts\EndCombat.cs" />
     <Compile Include="Assets\MisScripts\MetalMusicManager.cs" />
     <Compile Include="Assets\MisScripts\SpawnerEnemies_Alpha.cs" />

@@ -42,7 +42,8 @@ public class EndCombat : MonoBehaviour {
     void Update() {
 
         if (endCombatA && endCombatB && endCombatC)
-        { 
+        {
+            GameObject.Find("BossBarrier").GetComponent<DisableBossBarrier>().barrierCount++;
             this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
             Destroy(this);
         }
