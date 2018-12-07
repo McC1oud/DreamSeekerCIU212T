@@ -479,35 +479,35 @@ public class PlayerController : MonoBehaviour
     {
         attackcd = 1f;
         punchCollider.enabled = true;
-        punchmesh.enabled = true;
+        //punchmesh.enabled = true;
         yield return new WaitForSeconds(0.1f);
         punchCollider.enabled = false;
-        punchmesh.enabled = false;
+        //punchmesh.enabled = false;
     }
 
     IEnumerator Kicking()
     {
         attackcd = 1.5f;
         kickCollider.enabled = true;
-        kickmesh.enabled = true;
+        //kickmesh.enabled = true;
         yield return new WaitForSeconds(0.1f);
         kickCollider.enabled = false;
-        kickmesh.enabled = false;
+        //kickmesh.enabled = false;
     }
 
     IEnumerator TigerPound()
     {
         Debug.Log("Pound");
-        Time.timeScale = 0.3f;
+        Time.timeScale = 0.4f;
         myStats.currentEnergy -= tigercost;
         energyCd = 1.5f;
         yield return new WaitForSeconds(0.3f);
         Time.timeScale = 1;
         poundCollider.enabled = true;
-        poundmesh.enabled = true;
+        //poundmesh.enabled = true;
         yield return new WaitForSeconds(0.3f);
         poundCollider.enabled = false;
-        poundmesh.enabled = false;
+        //poundmesh.enabled = false;
     }
 
     //End Coroutines for attacks

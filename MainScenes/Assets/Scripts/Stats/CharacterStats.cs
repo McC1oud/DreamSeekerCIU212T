@@ -1,4 +1,5 @@
-﻿
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,6 +26,7 @@ public class CharacterStats : MonoBehaviour
     public int skillPoints = 0;
     public GameObject DamageTprefab;
 
+    public GameObject level;
     void Awake()
     {
         currentHealth = maxHealth;
@@ -76,6 +78,7 @@ public class CharacterStats : MonoBehaviour
         currentLevel += 1;
         skillPoints += 1;
         maxExperience = currentLevel ^ 2 * currentLevel * 10 + currentLevel;
+        //StartCoroutine(LvlUPAnim());
     }
     // Call  method for taking damage
     // Change to public virtual so that 
@@ -118,6 +121,8 @@ public class CharacterStats : MonoBehaviour
             Die();
         }
     }
+
+
 
     //public void TakeDamage (int damage)
     //{
@@ -188,5 +193,14 @@ public class CharacterStats : MonoBehaviour
         return temp;
     }
 
+    //IEnumerator LvlUPAnim()
+    //{
+    //    level.SetActive(true);
+    //    //kickmesh.enabled = true;
+    //    yield return new WaitForSeconds(1f);
+    //    level.SetActive(false);
+    //    yield return new WaitForSeconds(0.1f);
 
+    //    //kickmesh.enabled = false;
+    //}
 }

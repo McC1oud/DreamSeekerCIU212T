@@ -42,6 +42,7 @@ public class PunchTrigger : MonoBehaviour {
     //}
 
     void OnCollisionEnter(Collision other)
+
     {
         if (other.transform.tag == "enemy")
         {
