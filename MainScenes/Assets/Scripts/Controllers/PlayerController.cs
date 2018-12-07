@@ -21,7 +21,6 @@ public class PlayerController : MonoBehaviour
     private bool currentlyLockedOn = false;
     private bool letsLockOn = false;
 
-
     public Camera mainCam;
 
     public GameObject playerModel;
@@ -80,12 +79,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
         if (GameObject.Find("Menu").GetComponent<Controller>().GameIsPaused == true)
         {
             return;
         }
-        */
+        
         targetsAvailable = nearbyEnemyList.Count;
 
         if (targetsAvailable <= 0)
