@@ -12,11 +12,12 @@ public class Projectile : MonoBehaviour {
     GameObject player;
     public Rigidbody rb;
     CharacterStats myStats;
+    //public float dmgmulti = 1.2f;
 
     void Start()
     {
         myStats = GameObject.Find("Player").GetComponent<CharacterStats>();
-        Damage = Mathf.RoundToInt(myStats.damage.GetValue()*1.6f);
+        //Damage = Mathf.RoundToInt(myStats.damage*1.6f);
         Range = 20f;
         spawnPosition = transform.position;
         rb = GetComponent<Rigidbody>();
@@ -49,7 +50,7 @@ public class Projectile : MonoBehaviour {
         if (collision.transform.tag == "enemy")
         {
             print("DamageDealt");
-            collision.transform.GetComponent<CharacterStats>().TakeDamage(Mathf.RoundToInt(myStats.damage.GetValue() * 1.2f), CritChance());
+            collision.transform.GetComponent<CharacterStats>().TakeDamage(Mathf.RoundToInt(myStats.damage * myStats.energymultiplier), CritChance(), myStats.CriticalDamage);
             Dissipate();
         }
         
@@ -60,7 +61,7 @@ public class Projectile : MonoBehaviour {
         // Chance of critting hard coded to 50%
         // create formula to increase critcal chance based on stats
         int criticalchance = Random.Range(0, 100);
-        if (criticalchance < 50)
+        if (criticalchance < myStats.CriticalRate)
             return true;
         // else
         return false;

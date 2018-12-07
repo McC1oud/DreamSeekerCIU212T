@@ -50,7 +50,7 @@ public class ChargeAtk : MonoBehaviour {
 
 
 			//Add script to deal damage to player here
-			other.transform.GetComponent<CharacterStats>().TakeDamage(Damage,CritChance());
+			other.transform.GetComponent<CharacterStats>().TakeDamage(Damage,CritChance(),myStats.CriticalDamage);
 
 
 

@@ -7,6 +7,8 @@ public class PunchTrigger : MonoBehaviour {
     public int Damage { get; set; }
     CharacterStats myStats;
 
+    public int energyrestore = 5;
+
     // Use this for initialization
     void Start ()
     {
@@ -48,9 +50,9 @@ public class PunchTrigger : MonoBehaviour {
            
 
             //Add script to deal damage to player here
-            other.transform.GetComponent<CharacterStats>().TakeDamage(myStats.damage.GetValue(),CritChance());
-            myStats.currentEnergy += 5;
-            Debug.Log(myStats.name + " gained 5 energy.");
+            other.transform.GetComponent<CharacterStats>().TakeDamage(myStats.damage,CritChance(), myStats.CriticalDamage);
+            myStats.currentEnergy += energyrestore;
+            Debug.Log(myStats.name + " " + energyrestore +".");
 
             // Destroy(this.gameObject);
 
@@ -62,7 +64,7 @@ public class PunchTrigger : MonoBehaviour {
         // Chance of critting hard coded to 50%
         // create formula to increase critcal chance based on stats
         int criticalchance = Random.Range(0, 100);
-        if (criticalchance < 50)
+        if (criticalchance < myStats.CriticalRate)
             return true;
         // else
         return false;

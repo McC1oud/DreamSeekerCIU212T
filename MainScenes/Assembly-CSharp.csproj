@@ -124,15 +124,18 @@
     <Compile Include="Assets\Scripts\Stats\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\Stats\Stat.cs" />
     <Compile Include="Assets\Scripts\Win State.cs" />
-    <Compile Include="Assets\UI\BarScript.cs" />
-    <Compile Include="Assets\UI\Controller.cs" />
-    <Compile Include="Assets\UI\DarkenUiButton.cs" />
-    <Compile Include="Assets\UI\DisplaySkillText.cs" />
-    <Compile Include="Assets\UI\DragonSkills.cs" />
-    <Compile Include="Assets\UI\EBarScript.cs" />
-    <Compile Include="Assets\UI\NewBehaviourScript.cs" />
-    <Compile Include="Assets\UI\Player.cs" />
-    <Compile Include="Assets\UI\SakuraSkills.cs" />
+    <Compile Include="Assets\UI\MenuScripts\BarScript.cs" />
+    <Compile Include="Assets\UI\MenuScripts\Controller.cs" />
+    <Compile Include="Assets\UI\MenuScripts\DarkenUiButton.cs" />
+    <Compile Include="Assets\UI\MenuScripts\DisplaySkillText.cs" />
+    <Compile Include="Assets\UI\MenuScripts\DragonSkills.cs" />
+    <Compile Include="Assets\UI\MenuScripts\EBarScript.cs" />
+    <Compile Include="Assets\UI\MenuScripts\NewBehaviourScript.cs" />
+    <Compile Include="Assets\UI\MenuScripts\Player.cs" />
+    <Compile Include="Assets\UI\MenuScripts\SakuraSkills.cs" />
+    <Compile Include="Assets\UI\MenuScripts\TigerSkillsScript.cs" />
+    <Compile Include="Assets\UI\MenuScripts\TotalSkill.cs" />
+    <Compile Include="Assets\UI\MenuScripts\VolumeChange.cs" />
     <Compile Include="Assets\UI\StatScript\AttackScript.cs" />
     <Compile Include="Assets\UI\StatScript\CritChanceScript.cs" />
     <Compile Include="Assets\UI\StatScript\CritDamageScript.cs" />
@@ -141,19 +144,17 @@
     <Compile Include="Assets\UI\StatScript\ExperienceScript.cs" />
     <Compile Include="Assets\UI\StatScript\HealthScript.cs" />
     <Compile Include="Assets\UI\StatScript\LevelScript.cs" />
-    <Compile Include="Assets\UI\TigerSkillsScript.cs" />
-    <Compile Include="Assets\UI\VolumeChange.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/nedwards9/Desktop/DreamSeekerCIU212T/MainScenes/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/lnguyen7/Desktop/Clone/DreamSeekerCIU212T/MainScenes/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/nedwards9/Desktop/DreamSeekerCIU212T/MainScenes/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/lnguyen7/Desktop/Clone/DreamSeekerCIU212T/MainScenes/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/nedwards9/Desktop/DreamSeekerCIU212T/MainScenes/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/lnguyen7/Desktop/Clone/DreamSeekerCIU212T/MainScenes/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/nedwards9/Desktop/DreamSeekerCIU212T/MainScenes/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/lnguyen7/Desktop/Clone/DreamSeekerCIU212T/MainScenes/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -354,10 +355,10 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
-      <HintPath>C:/Users/nedwards9/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
+      <HintPath>C:/Users/lnguyen7/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
-      <HintPath>C:/Users/nedwards9/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/lnguyen7/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>

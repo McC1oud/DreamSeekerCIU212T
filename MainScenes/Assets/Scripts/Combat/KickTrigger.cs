@@ -7,8 +7,9 @@ public class KickTrigger : MonoBehaviour {
     public int Damage { get; set; }
     CharacterStats myStats;
     public int knockback;
-    
-    
+
+    public int energyrestore = 10;
+
     void Start()
     {
 
@@ -35,8 +36,8 @@ public class KickTrigger : MonoBehaviour {
             //rb.AddForce(other.contacts[0].normal * 1000);
 
             //Add script to deal damage to player here
-            other.transform.GetComponent<CharacterStats>().TakeDamage(Mathf.RoundToInt(myStats.damage.GetValue()*1.5f),CritChance());
-            myStats.currentEnergy += 10;
+            other.transform.GetComponent<CharacterStats>().TakeDamage(Mathf.RoundToInt(myStats.damage*1.5f),CritChance(), myStats.CriticalDamage);
+            myStats.currentEnergy += energyrestore;
             Debug.Log(myStats.name + " gained 10 energy.");
             
 

@@ -4810,10 +4810,8 @@ MonoBehaviour:
   currentHealth: 100
   maxEnergy: 100
   currentEnergy: 0
-  damage:
-    baseValue: 0
-  defense:
-    baseValue: 0
+  damage: 0
+  defense: 4
   CriticalRate: 0
   CriticalDamage: 0
   currentExperience: 0
@@ -4878,7 +4876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e03bcfc20bfebe47a74abd9b4dbbb35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockback: 0
+  dmgmulti: 0
 --- !u!114 &114265332827737880
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4917,7 +4915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e03bcfc20bfebe47a74abd9b4dbbb35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockback: 20
+  dmgmulti: 0
 --- !u!114 &114438325660839646
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4934,10 +4932,8 @@ MonoBehaviour:
   currentHealth: 100
   maxEnergy: 100
   currentEnergy: 0
-  damage:
-    baseValue: 5
-  defense:
-    baseValue: 2
+  damage: 0
+  defense: 4
   CriticalRate: 30
   CriticalDamage: 1.5
   currentExperience: 0
@@ -4979,6 +4975,10 @@ MonoBehaviour:
   poundmesh: {fileID: 23078063807364442}
   nearbyEnemyList:
   - {fileID: 0}
+  tigercost: 40
+  dragoncost: 20
+  sakuracost: 30
+  healamount: 5
 --- !u!114 &114556189756276682
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -10,6 +10,7 @@ public class GoingToPlayer : MonoBehaviour
     public Rigidbody rb;
     public bool waiting = true;
     public int Damage { get; set; }
+    public float CriticalDamage = 1.5f;
 
 
     void OnCollisionEnter(Collision other)
@@ -21,7 +22,7 @@ public class GoingToPlayer : MonoBehaviour
             //rb.AddForce(other.contacts[0].normal * 1000);
 
             //Add script to deal damage to player here
-            other.transform.GetComponent<CharacterStats>().TakeDamage(Damage,CritChance());
+            other.transform.GetComponent<CharacterStats>().TakeDamage(Damage,CritChance(), CriticalDamage);
 
             Destroy(this.gameObject);
 

@@ -17,6 +17,6 @@ public class AttackScript : MonoBehaviour {
     void Update()
     {
         Text healthtext = GameObject.Find("AttackText").GetComponent<Text>();
-        healthtext.text = " " + characterStats.damage.GetValue().ToString();
+        healthtext.text = " " + characterStats.damage.ToString();
     }
 }

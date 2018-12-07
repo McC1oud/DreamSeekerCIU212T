@@ -2620,15 +2620,14 @@ MonoBehaviour:
   currentHealth: 50
   maxEnergy: 0
   currentEnergy: 0
-  damage:
-    baseValue: 5
-  defense:
-    baseValue: 1
+  damage: 4
+  defense: 1
   CriticalRate: 0
   CriticalDamage: 0
   currentExperience: 0
   maxExperience: 0
   currentLevel: 0
+  skillPoints: 0
   DamageTprefab: {fileID: 1049026472754498, guid: f2a50e14f183fcb4f8c7bad424c4f5c8,
     type: 2}
 --- !u!114 &114460467452397426
@@ -2713,6 +2712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 3
+  experienceValue: 10
 --- !u!135 &135847642308413782
 SphereCollider:
   m_ObjectHideFlags: 1

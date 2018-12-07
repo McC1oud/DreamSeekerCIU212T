@@ -57,7 +57,17 @@ public class PlayerController : MonoBehaviour
     public MeshRenderer kickmesh;
     public MeshRenderer poundmesh;
 
-    public List<GameObject> nearbyEnemyList; 
+    public List<GameObject> nearbyEnemyList;
+
+    // energy cost of skills
+    public int tigercost = 40;
+    public int dragoncost = 20;
+    public int sakuracost = 30;
+
+    //heal amount modifier
+    public int healamount = 10;
+
+   
 
     // Use this for initialization
     void Start()
@@ -320,22 +330,22 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.U) || Input.GetAxis("Horizontal3") > 0)
         {
             //Check if have enough energy
-            if (myStats.currentEnergy < 25)
+            if (myStats.currentEnergy < sakuracost)
             {
                 Debug.Log("Not Enough Energy.");
             }
-            else if (myStats.currentEnergy >= 25)
+            else if (myStats.currentEnergy >= sakuracost)
             {
                 if (energyCd <= 0)
                 {
-                    myStats.currentHealth += (myStats.maxHealth / 5);
-                    myStats.currentEnergy -= 25;
-                    Debug.Log("Heal " + (myStats.maxHealth / 5));
+                    myStats.currentHealth +=  Mathf.RoundToInt(myStats.maxHealth / healamount);
+                    myStats.currentEnergy -= sakuracost;
+                    //Debug.Log("Heal " + (myStats.maxHealth / 5));
                     // Play heal animation
                 }
                 else
                 {
-                    Debug.Log("On Cooldown.");
+                    //Debug.Log("On Cooldown.");
                 }
                 
                 // Play heal animation
@@ -349,12 +359,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I) || Input.GetAxis("Vertical3") < 0)
         {
             //Check if have enough energy
-            if (myStats.currentEnergy < 30)
+            if (myStats.currentEnergy < tigercost)
             {
                 Debug.Log("Not Enough Energy.");
             }
 
-            else if (myStats.currentEnergy >= 30)
+            else if (myStats.currentEnergy >= tigercost)
             {
                 // Checks if attack is on cd/ animation is done from attack
                 if (energyCd <= 0)
@@ -380,11 +390,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.O) || Input.GetAxis("Vertical3") > 0)
         {
             // checks if you have 20 energy
-            if (myStats.currentEnergy < 20)
+            if (myStats.currentEnergy < dragoncost)
             {
                 Debug.Log("Not Enough Energy.");
             }
-            else if (myStats.currentEnergy >= 20)
+            else if (myStats.currentEnergy >= dragoncost)
             {
                 // Checks if attack is on cd/ animation is done from attack
                 if (energyCd <= 0)
@@ -392,7 +402,7 @@ public class PlayerController : MonoBehaviour
 
                     Debug.Log("EnergyShot!");
                     Instantiate(energyBall, ballSpawn.transform.position + new Vector3(0, 1, 1), Quaternion.identity);
-                    myStats.currentEnergy -= 20;
+                    myStats.currentEnergy -= dragoncost;
                     energyCd = 1.5f;
                 }
                 else
@@ -489,7 +499,7 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("Pound");
         Time.timeScale = 0.3f;
-        myStats.currentEnergy -= 30;
+        myStats.currentEnergy -= tigercost;
         energyCd = 1.5f;
         yield return new WaitForSeconds(0.3f);
         Time.timeScale = 1;

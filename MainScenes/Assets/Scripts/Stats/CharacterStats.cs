@@ -12,11 +12,12 @@ public class CharacterStats : MonoBehaviour
     public int maxEnergy = 100;
     public int currentEnergy; // { get; private set; }
 
-    public Stat damage;
-    public Stat defense;
+    public int damage;
+    public int defense;
 
     public int CriticalRate;
     public float CriticalDamage;
+    public float energymultiplier = 1.3f;
 
     public int currentExperience;
     public int maxExperience;
@@ -61,7 +62,7 @@ public class CharacterStats : MonoBehaviour
         //chance of critting hard coded
         //need to create formula to increase critical chance based on stats
         int criticalchance = Random.Range(0, 100);
-        if (criticalchance < 50)
+        if (criticalchance < CriticalRate)
             return true;
         //else
         return false;
@@ -79,11 +80,11 @@ public class CharacterStats : MonoBehaviour
     // Call  method for taking damage
     // Change to public virtual so that 
 
-    public void TakeDamage(int damage, bool isCrit)
+    public void TakeDamage(int damage, bool isCrit, float CriticalDamage)
     {
 
         // Damage reduction based on defense
-        damage -= defense.GetValue();
+        damage -= defense;
         // Set minimum damage to 0 to avoid healing from defense being higher than damage
         damage = Mathf.Clamp(damage, 0, int.MaxValue);
 
@@ -102,7 +103,7 @@ public class CharacterStats : MonoBehaviour
         else
         {
             // Calls the animator and applies the damage as text
-            damage = damage * 2;
+            damage = (int)(damage * CriticalDamage);
             currentHealth -= damage;
             InitCBT((damage).ToString()).GetComponent<Animator>().SetTrigger("Crit");
             print("crit " + (damage));

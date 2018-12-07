@@ -6,13 +6,13 @@ public class PoundTrigger : MonoBehaviour {
 
     public int Damage { get; set; }
     CharacterStats myStats;
-    public int knockback;
+    public int dmgmulti;
 
 
     void Start()
     {
         myStats = GameObject.Find("Player").GetComponent<CharacterStats>();
-        knockback = 20;
+        dmgmulti = 2;
         Damage = 50;
     }
 
@@ -33,7 +33,7 @@ public class PoundTrigger : MonoBehaviour {
             //rb.AddForce(other.contacts[0].normal * 1000);
 
             //Add script to deal damage to player here
-            other.transform.GetComponent<CharacterStats>().TakeDamage(myStats.damage.GetValue()*2, CritChance());
+            other.transform.GetComponent<CharacterStats>().TakeDamage(myStats.damage*dmgmulti, CritChance(), myStats.CriticalDamage);
 
 
 
@@ -47,7 +47,7 @@ public class PoundTrigger : MonoBehaviour {
         // Chance of critting hard coded to 50%
         // create formula to increase critcal chance based on stats
         int criticalchance = Random.Range(0, 100);
-        if (criticalchance < 50)
+        if (criticalchance < myStats.CriticalRate)
             return true;
         // else
         return false;
